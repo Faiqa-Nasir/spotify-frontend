@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <drawable android:drawable="@drawable/gradient_background"/>
+    </item>
+    <item>
+        <inset
+            android:insetLeft="16dp"
+            android:insetRight="16dp"
+            android:insetTop="16dp"
+            android:insetBottom="16dp">
+            <vector
+                android:width="24dp"
+                android:height="24dp"
+                android:src="@drawable/heart_icon"/>
+        </inset>
+    </item>
+</layer-list>

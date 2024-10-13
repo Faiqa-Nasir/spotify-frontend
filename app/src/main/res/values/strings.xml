@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MobileProject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="play_audio">Hello blank fragment</string>
+    <string name="go_back">Go Back</string>
+    <string name="favourite">Like Song</string>
+</resources>

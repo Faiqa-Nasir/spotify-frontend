@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="40dp"
+            android:elevation="8dp"> <!-- Elevation ensures the button is above the scrolling content -->
+
+            <Button
+                android:id="@+id/filter_all"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/light_purple_transparent"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:text="For You"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
+
+        <!-- Scrollable Content Section -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:background="@android:color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Filter Button -->
+
+                <!-- Header Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find your next favorite song"
+                    android:textColor="@android:color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="50dp"
+
+                    android:layout_marginBottom="16dp" />
+
+                <!-- First Component (Text Layered Over Image) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp">
+
+                        <ImageView
+                            android:id="@+id/image1"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:text="Find the rhythm... and feel the beat"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp">
+
+                        <ImageView
+                            android:id="@+id/image2"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:text="Unlock melodies, amplify your life"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/image3"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:text="Your soundtrack for every moment"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trending Right Now"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll_view_trending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/trending_songs_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!-- Trending song items will be added here programmatically -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <!-- Made For You Section -->
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:paddingEnd="16dp">
+
+                        <!-- "Made For" TextView -->
+                        <TextView
+                            android:id="@+id/text_made_for"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Made For "
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="23sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp" />
+
+                        <!-- "You" TextView -->
+                        <TextView
+                            android:id="@+id/text_you"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" You "
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="23sp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:background="@color/light_purple_transparent" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll_view_made_for_you"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/made_for_you_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!-- Dynamic items will be added here programmatically -->
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore New Artists"
+                    android:layout_marginTop="23dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll_view_new_artists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/new_artists_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!-- Artist items will be added here programmatically -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+                <!-- Followed Artists Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Followed Artists"
+                    android:textColor="@android:color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll_view_followed_artists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/followed_artists_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!-- Artist items will be added here programmatically -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            <!--recent songs-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Recent Songs"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll_view_recent_songs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/recent_songs_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!-- Song items will be added here programmatically -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+<!--this is my new added item you need to send stuff , -->
+                <!-- Trending Right Now Section -->
+                <!-- Explore New Artists Section -->
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

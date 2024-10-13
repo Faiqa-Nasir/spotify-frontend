@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArtistViewActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <!-- Sticky Header Section -->
+
+        <!-- Scrollable Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:id="@+id/artistRootLayout">
+
+                <!-- Artist Details Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Artist Image -->
+                    <ImageView
+                        android:id="@+id/artistImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/icon"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="16dp"/>
+
+                    <!-- Artist Name -->
+                    <TextView
+                        android:id="@+id/artistNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Artist Name"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Follow Button -->
+                    <Button
+                        android:id="@+id/followButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Follow"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_button_background"
+                    android:layout_marginBottom="16dp"/>
+
+                    <!-- Monthly Listeners -->
+
+                    <!-- Journey Paragraph -->
+                    <!-- Monthly Listeners Section -->
+                    <!-- Monthly Listeners Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="16dp">
+
+                        <!-- Monthly Listeners Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly Listeners"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <!-- Monthly Listeners Count -->
+                        <TextView
+                            android:id="@+id/monthlyListenersCountTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1,000,000"
+                            android:textColor="@android:color/holo_purple"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/journeyTitleTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Journey"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"/>
+
+                        <TextView
+                            android:id="@+id/journeyParagraphTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Explore the rich and diverse genres that define the artist's unique sound. From the pulsating rhythms of pop to the soulful melodies of jazz, each genre contributes to the artist's journey through the music world. Experience the fusion of styles and influences that make their music truly special."
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="4dp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Albums by the Artist"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:padding="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <HorizontalScrollView
+                        android:id="@+id/albumsHorizontalScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <LinearLayout
+                            android:id="@+id/albumsLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="16dp"/>
+                    </HorizontalScrollView>
+
+                    <!-- Genres Section -->
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/genresHeadingTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Genres"
+                        android:padding="16dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/genresTextView"
+                        android:padding="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"/>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

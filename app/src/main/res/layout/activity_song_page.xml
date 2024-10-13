@@ -1,0 +1,118 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/songPageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+    <ImageView
+        android:id="@+id/shareIcon"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_share" />
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.2"
+    android:src="@drawable/icon" />
+
+    <!-- Album Art -->
+    <ImageView
+        android:id="@+id/albumArt"
+        android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="120dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/icon" />
+
+    <!-- Song Name -->
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/albumArt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="More"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:ellipsize="end"
+    android:maxLines="1" />
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/artistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songName"
+        android:layout_centerHorizontal="true"
+        android:text="Doja Cat"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+    android:textStyle="italic"
+    android:layout_marginTop="8dp"
+    android:gravity="center" />
+
+    <!-- Heart Icon -->
+    <ImageView
+        android:id="@+id/heartIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/artistName"
+        android:layout_marginTop="24dp"
+        android:layout_toStartOf="@id/playButton"
+        android:layout_marginEnd="48dp"
+    android:src="@drawable/heart_icon2" />
+
+    <!-- Play Button -->
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_below="@id/artistName"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp"
+    android:src="@drawable/ic_play"
+    android:background="@drawable/round_purple_background"
+    android:elevation="8dp"
+    android:padding="16dp"/>
+
+    <!-- Plus Icon -->
+    <ImageView
+        android:id="@+id/plusIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/artistName"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@id/playButton"
+        android:layout_marginStart="48dp"
+    android:background="@drawable/round_purple_background"
+    android:src="@drawable/ic_add" />
+
+    <!-- Release Date -->
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+    android:text="2024-08-30"
+    android:textColor="@android:color/white"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:gravity="center"/>
+</RelativeLayout>

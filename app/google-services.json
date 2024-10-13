@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "280592675455",
+    "project_id": "echojam-51a29",
+    "storage_bucket": "echojam-51a29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280592675455:android:5ba2e754c113826c64454a",
+        "android_client_info": {
+          "package_name": "com.example.mobileproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5l3Wt4Lp5JZe-CLaVJMOKQc0i-dvBqqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

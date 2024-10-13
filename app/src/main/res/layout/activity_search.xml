@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+
+        >
+
+        <EditText
+            android:id="@+id/searchET"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:hint="  What do you want to Listen to?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp" />
+
+        <Button
+            android:id="@+id/SearchBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:drawableTop="@drawable/search"
+            android:contentDescription="search button"
+            app:layout_constraintTop_toTopOf="@id/searchET"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="20dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/imageButton1"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:contentDescription="Button description"
+            android:src="@drawable/bu"
+            app:layout_constraintTop_toBottomOf="@id/searchET"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+
+            android:src="@drawable/des_00000"
+            android:contentDescription="Button description"
+            app:layout_constraintTop_toBottomOf="@id/imageButton1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageButton3"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:src="@drawable/re_00000"
+            android:contentDescription="Button description"
+            app:layout_constraintTop_toBottomOf="@id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageButton4"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:src="@drawable/fyp_00000"
+            android:contentDescription="Button description"
+            app:layout_constraintTop_toBottomOf="@id/imageButton3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageButton5"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="Button description"
+            android:src="@drawable/poop_00000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageButton4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>
